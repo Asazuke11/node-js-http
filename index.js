@@ -90,7 +90,7 @@ const server = http.createServer((req, res) => {
 });
 
 
-const port = 8000; //ポート番号設定
+const port = process.env.PORT || 8000; //ポート番号設定
 
 //サーバー起動　起動と同時にコンソールにポート番号表示
 server.listen(port, () => {
