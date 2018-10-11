@@ -23,9 +23,11 @@ const server = http.createServer((req, res) => {
   switch (req.method) {
 
     //GETのリクエスト時
+    //heroku https://salty-escarpment-52569.herokuapp.com
+    //https://git.heroku.com/salty-escarpment-52569.git
     case 'GET':
 
-      if (req.url === '/enquetes/yaki-shabu') {
+      if (req.url === '/') {
         //pugモジュールでのファイル呼び出し
         res.write(pug.renderFile('./form.pug', {
           path: req.url,
